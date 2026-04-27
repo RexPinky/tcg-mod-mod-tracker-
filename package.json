@@ -1,0 +1,32 @@
+{
+  "name": "tcg-electron-mod-crash-tracker",
+  "version": "1.0.0",
+  "description": "Electron + React app for tracking TCG Card Shop Simulator game status, mod changes, and crashes",
+  "author": "joker",
+  "license": "MIT",
+  "private": true,
+  "main": "electron/main.js",
+ 
+
+"scripts": {
+   "dev": "concurrently -k \"vite\" \"node ./node_modules/electron/cli.js .\"",
+  "build": "vite build",
+  "preview": "vite preview",
+  "electron": "node ./node_modules/electron/cli.js .",
+  "test": "echo \"Error: no test specified\" && exit 1"
+},
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "chokidar": "^3.5.3",
+    "ps-list": "^8.1.1",
+    "archiver": "^6.0.2"
+  },
+  "devDependencies": {
+    "electron": "^30.0.0",
+    "electron-builder": "^24.13.3",
+    "vite": "^5.2.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "concurrently": "^8.2.2"
+  }
+}

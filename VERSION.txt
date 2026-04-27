@@ -1,0 +1,12 @@
+TCG Mod & Crash Tracker
+Version: 0.5.0-beta
+Release Name: Phase 5 Diagnostic Beta
+
+Status:
+- Diagnostic features only
+- No automatic mod or save changes
+- Safe for beta testing
+
+Code Freeze:
+Phase 5
+``

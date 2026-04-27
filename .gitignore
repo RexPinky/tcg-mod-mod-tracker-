@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Electron build artifacts
+dist/
+build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Runtime crash output
+crashes/
+Crash_Report/
+
+# Git internal folders (just in case)
+Git/
