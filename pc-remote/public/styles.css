@@ -1,0 +1,184 @@
+:root {
+  --bg0: #0c1412;
+  --bg1: #15241f;
+  --ink: #e8f2ee;
+  --muted: #9bb5ab;
+  --line: rgba(232, 242, 238, 0.12);
+  --accent: #3dd6a5;
+  --accent-ink: #062117;
+  --warn: #e0b35a;
+  --danger: #e07a6a;
+  --panel: rgba(18, 34, 29, 0.82);
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+  --font-display: "Segoe UI", "Avenir Next", "Trebuchet MS", sans-serif;
+  --font-body: "Segoe UI", "Avenir Next", "Trebuchet MS", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--bg0);
+}
+
+body {
+  min-height: 100dvh;
+}
+
+.bg {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(61, 214, 165, 0.18), transparent 55%),
+    radial-gradient(900px 500px at 100% 0%, rgba(224, 179, 90, 0.12), transparent 50%),
+    linear-gradient(160deg, var(--bg0), var(--bg1) 55%, #0a1210);
+  z-index: 0;
+}
+
+.shell {
+  position: relative;
+  z-index: 1;
+  width: min(440px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 1.5rem 0 2.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.top {
+  padding-top: 0.5rem;
+}
+
+.brand {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 8vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+.tag {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.status,
+.pair {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 1rem 1.1rem;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+.status-line {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.meta {
+  margin: 0.45rem 0 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.actions {
+  display: grid;
+  gap: 0.75rem;
+}
+
+button {
+  appearance: none;
+  border: 0;
+  border-radius: 14px;
+  padding: 1rem 1.1rem;
+  font: inherit;
+  font-weight: 650;
+  font-size: 1.05rem;
+  color: var(--accent-ink);
+  background: var(--accent);
+  cursor: pointer;
+  transition: transform 0.15s ease, filter 0.15s ease, opacity 0.15s ease;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+button.warn {
+  background: var(--warn);
+  color: #1d1405;
+}
+
+button.danger {
+  background: var(--danger);
+  color: #2a0d08;
+}
+
+.pair label {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.pair input {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.85rem 0.9rem;
+  background: rgba(0, 0, 0, 0.25);
+  color: var(--ink);
+  font: inherit;
+  margin-bottom: 0.75rem;
+}
+
+.hint {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+.hint code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.8em;
+  color: var(--ink);
+}
+
+.toast {
+  margin: 0;
+  padding: 0.8rem 0.95rem;
+  border-radius: 12px;
+  background: rgba(61, 214, 165, 0.14);
+  border: 1px solid rgba(61, 214, 165, 0.35);
+  color: var(--ink);
+  font-size: 0.9rem;
+}
+
+.toast.error {
+  background: rgba(224, 122, 106, 0.14);
+  border-color: rgba(224, 122, 106, 0.4);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  button {
+    transition: none;
+  }
+}

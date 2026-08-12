@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#0f1a17" />
+    <title>PC Remote</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="bg"></div>
+    <main class="shell">
+      <header class="top">
+        <p class="brand">PC Remote</p>
+        <p class="tag" id="hostLabel">Connecting…</p>
+      </header>
+
+      <section class="status" id="statusCard" aria-live="polite">
+        <p class="status-line" id="statusLine">Waiting for PC…</p>
+        <p class="meta" id="metaLine"></p>
+      </section>
+
+      <section class="actions" aria-label="Controls">
+        <button type="button" data-action="notify">Send alert</button>
+        <button type="button" data-action="open-url">Open link</button>
+        <button type="button" class="warn" data-action="lock">Lock PC</button>
+        <button type="button" class="danger" data-action="sleep">Sleep PC</button>
+      </section>
+
+      <section class="pair" id="pairPanel" hidden>
+        <label for="tokenInput">Access token</label>
+        <input
+          id="tokenInput"
+          type="password"
+          autocomplete="off"
+          spellcheck="false"
+          placeholder="Paste token from PC"
+        />
+        <button type="button" id="saveToken">Save & connect</button>
+      </section>
+
+      <p class="hint" id="hint">
+        Run <code>npm start</code> inside <code>pc-remote</code> on your PC, then
+        open the printed Phone URL on this device.
+      </p>
+      <p class="toast" id="toast" hidden></p>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
