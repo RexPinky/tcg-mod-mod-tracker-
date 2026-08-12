@@ -1,0 +1,14 @@
+{
+  "name": "pc-remote-companion",
+  "version": "1.0.0",
+  "description": "Control your PC from your phone on the same Wi‑Fi network",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

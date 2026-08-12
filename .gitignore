@@ -1,6 +1,9 @@
 # Dependencies
 node_modules/
 
+# PC Remote companion secrets / runtime
+pc-remote/.data/
+
 # Electron build artifacts
 dist/
 build/
