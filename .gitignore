@@ -5,6 +5,8 @@ node_modules/
 dist/
 build/
 
+# Upload-ready release zips under releases/ are tracked (do not ignore releases/*.zip)
+
 # Logs
 npm-debug.log*
 yarn-debug.log*

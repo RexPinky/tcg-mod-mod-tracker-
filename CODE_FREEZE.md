@@ -1,72 +1,22 @@
-# 🧊 Code Freeze — Phase 5 Beta
+# Code Freeze — Lifted for 1.0 Compatibility
 
 **Project:** TCG Mod & Crash Tracker  
-**Version:** v0.5.0-beta  
-**Freeze Date:** April 2026  
+**Previous freeze:** Phase 5 Diagnostic Beta (v0.5.0-beta)  
+**Status:** LIFTED for v0.6.0 Game 1.0 Compatibility  
 
 ---
 
-## 🔒 Freeze Scope
+## Why the freeze was lifted
 
-This codebase is currently **frozen** for the **Phase 5 Diagnostic Beta**.
+TCG Card Shop Simulator exited Early Access and shipped **1.0** (plus builds **1.01** / **1.02**).  
+Hardcoded install paths and EA-era assumptions needed a compatibility update so crash diagnosis still works.
 
-The purpose of this freeze is to:
-- Stabilize crash detection
-- Validate crash intelligence accuracy
-- Collect real-world mod-crash data
-- Prevent feature drift during beta testing
+## Still out of scope
 
----
-
-## ✅ Included Phases
-
-- Phase 1 — IPC Architecture
-- Phase 2 — Game Process Detection
-- Phase 3 — Mod Folder Monitoring
-- Phase 4 — Crash Detection & Reporting
-- Phase 5 — Crash Intelligence (Rule-Based)
-
----
-
-## ❌ Excluded (Post-Beta)
-
-The following features are **explicitly disabled** during this freeze:
+These remain disabled until a later recovery phase:
 - Automatic mod disabling
 - Automated recovery actions
 - Save file manipulation
 - Mod file modifications
 
----
-
-## ✅ Allowed Changes During Freeze
-
-✔ Critical bug fixes  
-✔ False-positive crash detection fixes  
-✔ Crash intelligence tuning (rules only)  
-✔ UI clarity / copy updates  
-✔ Logging improvements  
-
----
-
-## ❌ Disallowed Changes During Freeze
-
-✖ New features  
-✖ Phase 6 recovery logic  
-✖ Refactors without bug justification  
-✖ Behavioral changes to mod handling  
-
----
-
-## ✅ Exit Criteria
-
-The freeze will be lifted when:
-- Crash detection accuracy is validated
-- Removed-mod crash logic is confirmed in the wild
-- Beta feedback stabilizes
-
-At that point, development will proceed to **Phase 6 (Recovery & Automation)**.
-
----
-
-**Frozen by:** Project maintainer  
-**Status:** ACTIVE
+Diagnostic-only mode remains the default.

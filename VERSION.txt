@@ -1,12 +1,13 @@
 TCG Mod & Crash Tracker
-Version: 0.5.0-beta
-Release Name: Phase 5 Diagnostic Beta
+Version: 0.6.0
+Release Name: Game 1.0 Compatibility
 
 Status:
 - Diagnostic features only
 - No automatic mod or save changes
-- Safe for beta testing
+- Compatible with TCG Card Shop Simulator 1.0 / 1.01 / 1.02
 
-Code Freeze:
-Phase 5
-``
+Notes:
+- Auto-detects Steam install path
+- Watches BepInEx LogOutput.log for exception signals
+- Reinstall BepInEx after updating the game to 1.0

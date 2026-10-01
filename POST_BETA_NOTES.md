@@ -11,6 +11,8 @@ Nothing here should be implemented until the freeze is lifted.
 - Crash history timeline
 - Per-mod crash frequency tracking
 - Save dependency warnings
+- Known-bad mod list curated for game 1.0 / 1.01 / 1.02
+- One-click BepInEx reinstall helper after Steam updates
 
 ---
 
