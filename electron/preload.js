@@ -1,12 +1,31 @@
 const { contextBridge, ipcRenderer } = require("electron");
 
 contextBridge.exposeInMainWorld("tcg", {
-  onGameStatus: (cb) =>
-    ipcRenderer.on("game-status", (_, d) => cb(d)),
+  getAppStatus: () => ipcRenderer.invoke("get-app-status"),
+  getInstallInfo: () => ipcRenderer.invoke("get-install-info"),
+  reloadInstall: () => ipcRenderer.invoke("reload-install"),
 
-  onModEvent: (cb) =>
-    ipcRenderer.on("mod-event", (_, d) => cb(d)),
+  onGameStatus: (cb) => {
+    const listener = (_, d) => cb(d);
+    ipcRenderer.on("game-status", listener);
+    return () => ipcRenderer.removeListener("game-status", listener);
+  },
 
-  onCrashDetected: (cb) =>
-    ipcRenderer.on("crash-detected", (_, d) => cb(d))
+  onModEvent: (cb) => {
+    const listener = (_, d) => cb(d);
+    ipcRenderer.on("mod-event", listener);
+    return () => ipcRenderer.removeListener("mod-event", listener);
+  },
+
+  onCrashDetected: (cb) => {
+    const listener = (_, d) => cb(d);
+    ipcRenderer.on("crash-detected", listener);
+    return () => ipcRenderer.removeListener("crash-detected", listener);
+  },
+
+  onInstallInfo: (cb) => {
+    const listener = (_, d) => cb(d);
+    ipcRenderer.on("install-info", listener);
+    return () => ipcRenderer.removeListener("install-info", listener);
+  },
 });
